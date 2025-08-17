@@ -1,0 +1,115 @@
+   /* Font romantis */
+    @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Playball&display=swap');
+
+    .popup-romantic {
+        border-radius: 20px !important;
+        background: linear-gradient(135deg, #fdf2f8, #f9e8f6, #eef4ff);
+        box-shadow: 0 12px 30px rgba(249, 134, 194, 0.18),
+                    0 6px 12px rgba(144, 100, 255, 0.1);
+        border: 1px solid #f8ddea;
+        font-family: 'Quicksand', sans-serif;
+        color: #5a5a5a;
+        overflow: hidden;
+        position: relative;
+    }
+
+    /* Hiasan jantung kecil di sudut (opsional) */
+    .popup-romantic::before {
+        content: "💗";
+        position: absolute;
+        top: 15px;
+        right: 20px;
+        font-size: 18px;
+        opacity: 0.6;
+        animation: heartbeat 2s infinite;
+    }
+
+    @keyframes heartbeat {
+        0%, 100% { transform: scale(1); }
+        50% { transform: scale(1.2); }
+    }
+
+    .title-romantic {
+        font-family: 'Playball', cursive;
+        font-size: 28px !important;
+        color: #d66fa1 !important;
+        text-shadow: 0 1px 2px rgba(214, 111, 161, 0.2);
+        margin-bottom: 8px;
+    }
+
+    .content-romantic {
+        font-size: 14px;
+        color: #888;
+        margin-bottom: 16px;
+    }
+
+    .input-romantic {
+        padding: 14px 18px;
+        border: 2px solid #f0c4e8;
+        border-radius: 14px;
+        font-size: 16px;
+        background-color: #fffaf4;
+        color: #555;
+        transition: all 0.3s ease;
+        box-shadow: 0 3px 10px rgba(240, 140, 200, 0.15);
+        font-family: 'Quicksand', sans-serif;
+    }
+
+    .input-romantic:focus {
+        outline: none;
+        border-color: #e98dcf;
+        box-shadow: 0 0 0 4px rgba(233, 141, 207, 0.25);
+        transform: scale(1.01);
+    }
+
+    .confirm-btn-romantic {
+        background: linear-gradient(to right, #f06292, #ba68c8) !important;
+        color: white !important;
+        border: none;
+        padding: 10px 26px;
+        border-radius: 16px;
+        font-weight: 600;
+        font-family: 'Quicksand', sans-serif;
+        box-shadow: 0 5px 15px rgba(240, 98, 146, 0.3);
+        transition: all 0.3s ease;
+        letter-spacing: 0.5px;
+    }
+
+    .confirm-btn-romantic:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 20px rgba(240, 98, 146, 0.4);
+        background: linear-gradient(to right, #ec407a, #9c4ba9) !important;
+    }
+
+    /* Animasi popup */
+    .swal2-popup.swal2-modal.animate__faster {
+        animation-duration: 0.5s;
+    }
+
+    /* Footer yang selalu di bawah */
+  footer {
+    margin-top: auto;
+    padding: 16px 0;
+    text-align: center;
+    color: #ff4081;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4em;
+    opacity: 0.9;
+    font-weight: 500;
+    letter-spacing: 1px;
+    animation: fadeInUp 0.8s ease-out;
+    z-index: 10;
+  }
+
+  @keyframes fadeInUp {
+    from {
+      opacity: 0;
+      transform: translateY(15px);
+    }
+    to {
+      opacity: 0.9;
+      transform: translateY(0);
+    }
+  }
+
+  

@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+<meta charset='UTF-8'/><meta content='width=device-width, initial-scale=1, user-scalable=1, minimum-scale=1, maximum-scale=5' name='viewport'/><meta content='IE=edge' http-equiv='X-UA-Compatible'/>
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Shippori+Antique:wght@400;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <!-- Tambahkan di <head> -->
+<link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@500&family=Playball&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11.0.19/dist/sweetalert2.all.min.js"></script><link href="tag.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/typeit@8.7.0/dist/index.umd.js"></script>
+  <script src="https://kit.fontawesome.com/4f3ce16e3e.js" crossorigin="anonymous"></script>
+  
+<head>
+<title>Happy Birthday</title>
+<link rel="icon" type="image/x-icon" href="https://www.palingit.com/favicon.ico">
+<meta name="description" content="HTML Replit Coding">
+<!-- 
+  Made with love by ojann!
+  
+     Instagram: @ojann.ae
+     TikTok: @ojann.ae
+     Email: fauzannashiruddin50@gmail.com
+     
+  Thanks to all <3
+-->
+</head>
+<body>
+	
+   <!-- Ganti Audio di sini -->
+   <audio src="https://feeldreams.github.io/djikhlas.mp3" id="linkmp3" class="sembunyi"></audio>
+   
+   <div id="bodyblur">
+     <!-- Wallpaper --><img src="https://i.pinimg.com/736x/c0/7d/c1/c07dc15cf5fb32daf2d52724b55754fe.jpg" id="wallpaper"/><div id="beneranblur"></div>
+   </div>
+   
+   <div id='Content'>
+
+     <div id="kadoIn">
+       <!-- Tombol Surat --><img src="https://feeldreams.github.io/kadoin.png"/>
+     </div>
+     <p id="ket">Klik Kadonya!</p>
+
+     <div class="kumpulanstiker">
+         <!-- Stiker untuk Konten -->
+         <img src="https://feeldreams.github.io/bunga.gif" id="fotostiker"/>
+         <img src="https://feeldreams.github.io/pusn.gif" id="fotostiker1"/>
+         <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker2"/>
+         <img src="https://feeldreams.github.io/cilukba.gif" id="fotostiker3"/>
+         <img src="https://feeldreams.github.io/pandakuning.gif" id="fotostiker4"/>
+         <img src="https://feeldreams.github.io/emawh.gif" id="fotostiker5"/>
+         
+         <img src="https://feeldreams.github.io/pandacoklat.gif" id="fotostiker6"/>
+     </div>
+     
+     <p id="halo" class="halo"></p>
+     
+     <div><blockquote id='bq' data-text='㋡'>
+       <p id="kalimat">Aku Ada Sesuatu Nih 🤣❤️</p>
+
+       <p id="pesan1">Klik 4 LOVE di Bawah! 😆❤️</p>
+       <div id="kolombaru">
+         <li id="lv1">🩷</li>
+         <li id="lv2">🩷</li>
+         <li id="lv3">🩷</li>
+         <li id="lv4">🩷</li>
+       </div>
+
+       <p id="pesan2">Tunggu...</p>
+       <!-- Pesan -->
+       <p id="pesan3">Ciee.. Ada yang Ultah Nih 🤣❤️</p>
+       <p id="pesan4">Happy Birthday, </p>
+       <p id="pesan5" class="gaya2">Nambah tua aja ya, hehe</p>
+       <p id="pesan6" class="gaya2">Moga panjang umur biar tiap tahun bisa traktirin aku wkwk 😆❤️</p>
+       <p id="pesan7" class="gaya2">Sehat selalu ya!</p>
+
+       <p id="pesan8" class="gaya2">Canda wkwwk :v</p>
+       <p id="pesan9" class="gaya2">Oh iya, semoga di hari spesialmu ini kamu dapat menjadi pribadi yang lebih baik yaa.. 🥳❤️</p>
+       <p id="pesan10" class="gaya2">Happy Level Up Day!! 🥳</p>
+
+       <!-- Tombol Lanjut -->
+       <p id="opsL">Klik untuk Lanjut</p>
+     </blockquote></div>
+
+     <!-- Tombol Kirim Pesan -->
+     <div id="Tombol"><a id="By">&#128140; Lanjut</a></div>
+
+     <!-- Pesan Tambahan -->
+     <p id="katatambahan" class="sembunyi">Gajadi deh soalnya kamu bau wleee 😜</p>
+     
+     <!-- Pesan Ditolak -->
+     <div id="pesanditolak">
+       <img id="stikerditolak" src="https://feeldreams.github.io/weee.gif"/>
+       <p id="kataditolak">Yaudah kalo gamau mh 😜</p>
+     </div>
+
+   </div>
+
+<script>
+  // Variabel utama
+const body = document.querySelector("body");
+const swalst = Swal.mixin({
+    timer: 2300,
+    allowOutsideClick: false,
+    showConfirmButton: false,
+    timerProgressBar: true,
+    imageHeight: 90,
+});
+audio = new Audio('' + linkmp3.src);
+ftganti = 0;
+fungsi = 0;
+fungsiAwal = 0;
+deffotostiker = fotostiker.src;
+
+// Efek jatuhan modern
+function berjatuhan() {
+    const heart = document.createElement("div");
+    heart.className = "falling-heart";
+    heart.innerHTML = "💖"; // Bisa diganti "❄️" atau emoji lain
+    heart.style.left = (Math.random() * 90) + "vw";
+    heart.style.animationDuration = (Math.random() * 3 + 2) + "s";
+    heart.style.fontSize = (Math.random() * 15 + 15) + "px";
+    body.appendChild(heart);
+
+    // Hapus otomatis setelah animasi
+    setTimeout(() => heart.remove(), 5000);
+}
+
+// Buat efek jatuhan terus menerus
+setInterval(berjatuhan, 300);
+
+// Style untuk efek jatuhan
+const style = document.createElement("style");
+style.innerHTML = `
+.falling-heart {
+    position: fixed;
+    top: -20px;
+    animation: fall linear forwards;
+    pointer-events: none;
+    filter: drop-shadow(0 0 5px rgba(255,0,150,0.8));
+}
+@keyframes fall {
+    to {
+        transform: translateY(110vh) rotate(360deg);
+        opacity: 0;
+    }
+}
+`;
+document.head.appendChild(style);
+
+// Tampilan konten muncul
+Content.style = "opacity:1;margin-top:16vh;transition:opacity 0.8s ease, margin-top 0.8s ease;";
+
+// SweetAlert lebih modern
+const swals = Swal.mixin({
+    allowOutsideClick: false,
+    cancelButtonColor: '#FF0040',
+    imageHeight: 80,
+    background: '#fff',
+    color: '#333',
+    confirmButtonColor: '#ff4081',
+    customClass: {
+        popup: 'animated fadeInDown faster rounded-xl shadow-lg'
+    }
+});
+
+// Efek klik kado
+document.getElementById("kadoIn").onclick = function () {
+    if (fungsiAwal == 0) {
+        audio.play();
+        fungsiAwal = 1;
+
+        // Animasi kado
+        kadoIn.style = `
+            transition: all 1.2s ease;
+            transform: scale(12) rotate(25deg);
+            opacity: 0;
+        `;
+
+        // Zoom wallpaper cinematic
+        wallpaper.style = `
+            transition: transform 2s ease;
+            transform: scale(1.3);
+            filter: blur(3px) brightness(0.9);
+        `;
+
+        ket.style = "display:none";
+        setTimeout(initengahan, 500);
+        setTimeout(inipesan, 800);
+    }
+}
+
+async function inipesan() {
+    const { value: nama } = await swals.fire({
+        title: '<span class="title-romantic">💖 Masukin Nama Kamu</span>',
+        html: '<p style="color: #999; font-size: 14px;">Supaya aku bisa panggil kamu dengan manis 😊</p>',
+        icon: false,
+        input: 'text',
+        inputPlaceholder: 'Tulis nama manismu...',
+        inputAttributes: {
+            autocapitalize: 'off',
+            'aria-label': 'Nama kamu'
+        },
+        showCancelButton: false,
+        confirmButtonText: 'Lanjut deh →',
+        reverseButtons: true,
+        focusConfirm: false,
+
+        // Custom class romantis
+        customClass: {
+            popup: 'popup-romantic',
+            title: 'title-romantic',
+            content: 'content-romantic',
+            input: 'input-romantic',
+            confirmButton: 'confirm-btn-romantic'
+        },
+
+        // Animasi lembut
+        showClass: {
+            popup: 'animate__animated animate__fadeInUp animate__faster'
+        },
+        hideClass: {
+            popup: 'animate__animated animate__fadeOutDown animate__faster'
+        },
+
+        // Efek saat muncul
+        didOpen: () => {
+            const input = Swal.getInput();
+            input.type = 'text';
+            input.style.textAlign = 'center';
+            input.style.fontFamily = "'Quicksand', sans-serif";
+
+            // Efek saat fokus
+            input.addEventListener('focus', () => {
+                input.parentElement.style.transform = 'scale(1.02)';
+                input.parentElement.style.transition = 'all 0.2s ease';
+            });
+            input.addEventListener('blur', () => {
+                input.parentElement.style.transform = 'scale(1)';
+            });
+        }
+    });
+
+    if (nama && nama.trim().length > 0 && nama.length <= 10) {
+        window.nama = nama.trim();
+        vketikhalo = "Hai, " + window.nama + " ✨";
+        mulainama();
+    } else {
+        await swals.fire({
+            icon: 'error',
+            title: '<span style="font-family: \'Playball\', cursive; color: #e57373;">Oops...</span>',
+            text: 'Nama gak boleh kosong, cuma spasi, atau lebih dari 10 huruf ya 😢',
+            confirmButtonText: 'Oke, aku coba lagi',
+            confirmButtonColor: '#f06292',
+            customClass: {
+                popup: 'popup-romantic'
+            },
+            showClass: {
+                popup: 'animate__animated animate__shakeX'
+            }
+        });
+        inipesan();
+    }
+}
+
+
+  //Variable Pertanyaan Akhir
+  var tanya = 'Mau Kado Gak Nih? 😶❤️';
+  var opstanya = 'Ayo jawab 😆';
+  var tompositif = 'Mau';
+  var tomnegatif = 'Engga';
+    
+    async function menuju(){pesanwhatsapp = "Makasii udah ngucapin " + nama + " ultah ><";await swals.fire('OK!', 'Kirim jawabannya ke WhatsApp aku, ya!', 'success');window.location = "https://api.whatsapp.com/send?phone=6285774262841&text="  + pesanwhatsapp;}
+</script>
+<!-- Sampai Sini -->
+ <script src="https://feeldreams.github.io/heihbd/script.js"></script>
+
+<!-- 💖 FOOTER: SELALU DI BAWAH, TETAP MUNCUL SETELAH KLIK KADO -->
+<footer style="
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 12px 0;
+    text-align: center;
+    color: #f3f0f1;
+    font-family: 'Dancing Script', cursive;
+    font-size: 1.4em;
+    opacity: 0.9;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.05);
+    animation: fadeInUp 0.8s ease-out;
+">
+  by kiki
+</footer>
+
+</body>
+  </html>
